@@ -2,11 +2,12 @@ package com.yawn.learnfacebooklogin;
 
 import java.util.ArrayList;
 import java.util.List;
+import org.parceler.Parcel;
 
 /**
  * Created by tieorange on 18/08/16.
  */
-public class Film {
+@Parcel public class Film {
   public String pictureUrl;
   public String name;
   public String genre;

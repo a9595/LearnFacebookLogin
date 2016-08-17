@@ -4,4 +4,5 @@
   <string name="facebook_app_id">160614964371603</string>
   <string name="fb_login_protocol_scheme">fb160614964371603</string>
   <string name="item2">Calendar</string>
+  <string name="title_activity_film">FilmActivity</string>
 </resources>

@@ -1,6 +1,7 @@
 package com.yawn.learnfacebooklogin;
 
 import android.content.Context;
+import android.content.Intent;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -15,8 +16,7 @@ import java.util.List;
 /**
  * Created by tieorange on 18/08/16.
  */
-public class AdapterGridView
-    extends RecyclerView.Adapter<AdapterGridView.ViewHolder> {
+public class AdapterGridView extends RecyclerView.Adapter<AdapterGridView.ViewHolder> {
 
   private final Context mContext;
   public final List<Film> mFilms;
@@ -39,7 +39,6 @@ public class AdapterGridView
     Glide.with(mContext).load(film.pictureUrl).into(holder.image);
   }
 
-
   @Override public int getItemCount() {
     return mFilms.size();
   }
@@ -58,7 +57,8 @@ public class AdapterGridView
     @Override public void onClick(View view) {
       int adapterPosition = getAdapterPosition();
       Film film = mFilms.get(adapterPosition);
+      Intent intent = FilmActivity.buildIntent(mContext, film);
+      mContext.startActivity(intent);
     }
-
   }
 }
